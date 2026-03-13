@@ -2,7 +2,7 @@ window.onload = function() {
     popularAnos();
     selecionarDataAtual();
 };
-
+//Aqui vai ser responsavel para acessar os anos no botão do site.
 function popularAnos() {
     const selectAno = document.getElementById('ano');
     const anoFinal = 2026;

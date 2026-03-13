@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador IRPF - Atlas.Aqui</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-content">ATLAS.AQUI</div>
+</header>
+
+<div class="container">
+    <main>
+        <h1>SIMULADOR ALÍQUOTAS EFETIVAS</h1>
+
+        <div class="selectors-wrapper">
+            <div class="row">
+                <div class="label-box"><span>ANO-CALENDÁRIO:</span></div>
+                <div class="select-box">
+                    <select id="ano"></select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label-box"><span>MÊS:</span></div>
+                <div class="select-box">
+                    <select id="mes">
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <h3>1. Rendimentos tributáveis</h3>
+        <div class="card">
+            <p class="info-text">Salário bruto, aluguéis, etc.</p>
+            <div class="input-container">
+                <input type="number" id="salario" placeholder="0,00" step="0.01">
+            </div>
+        </div>
+
+        <h3>2. Deduções</h3>
+        <div class="card" style="background-color: #72a9bc;">
+            <p class="info-text">Previdência, dependentes, pensão, etc.</p>
+            <div class="input-container">
+                <input type="number" id="deducoes" placeholder="0,00" step="0.01">
+            </div>
+        </div>
+
+        <div class="buttons-group">
+            <button class="btn-calc" onclick="calcular()">Calcular</button>
+            <button class="btn-limpar" onclick="limpar()">Limpar</button>
+        </div>
+
+        <h3>3. Resultado do Cálculo</h3>
+        <div class="card result-card">
+            <p>Alíquota efetiva - <strong id="res-aliquota">0,00</strong>%</p>
+        </div>
+
+        <div class="footer-result">
+            <strong>Imposto de: <span id="res-valor">R$ 0,00</span></strong>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
